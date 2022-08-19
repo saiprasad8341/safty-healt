@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* antd override */
+input,
+.ant-picker {
+  border-radius: 2px;
+  border: 1px solid #80808025;
+  height: 40px;
+  width: 100%;
+}
+.ant-form-item-control-input-content {
+  border-radius: 2px;
+  border: 1px solid #80808025;
+}
+input:focus,
+.ant-picker {
+  outline: none;
+  box-shadow: none;
+  border: 1px solid gray;
+}
+label {
+  font-size: 16px;
+  color: black;
+}
+.ant-form-item {
+  margin: 10px 0;
+}
+.ant-picker-input input {
+  border: none;
+}
+
+/* Common styling */
+.spinner-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.687);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.767);
+  margin: 0;
+  padding: 0;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.spinner-border {
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+}
+
+.page-title {
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.884);
+  font-weight: bold;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: rgba(0, 0, 0, 0.678);
+}
+.normal-text {
+  font-size: 1rem;
+}
+.card {
+  box-shadow: 0 0 2px rgb(133, 130, 130);
+  border-radius: 0;
+}
+
+.primary-button {
+  background-color: #005555;
+  border-color: #005555;
+  width: max-content;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.anchor {
+  color: black;
+  text-decoration: underline;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  text-decoration: underline;
+}
+
+/* auntatication pages */
+.authentication {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #005555;
+}
+.authentication-form {
+  width: 400px;
+}
+
+.authentication .card-title {
+  background-color: orangered;
+  color: #fff;
+  max-width: max-content;
+  padding: 7px 15px;
+  text-transform: capitalize;
+  margin-left: -40px;
+  border-bottom-left-radius: 10px;
+}
