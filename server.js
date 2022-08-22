@@ -21,14 +21,6 @@ app.use("/api/doctor", doctorsRoute);
 
 const port = process.env.PORT || 5000;
 
-const start = async () => {
-  try {
-    await dbConfig(process.env.MONGO_URL);
-    app.listen(port, () => console.log(`server is listing at : ${port}`));
-  } catch (error) {
-    console.log(error);
-  }
-};
 //server production assets
 if (process.env.NODE_ENV === "production") {
   //app.use(express.static(path.join("client/build")))
@@ -37,6 +29,16 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client/build/index.html"));
   });
 }
+
+const start = async () => {
+  try {
+    await dbConfig(process.env.MONGO_URL);
+    app.listen(port, () => console.log(`server running at ${process.env.NODE_ENV} mode is listing at : ${port}`));
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 app.get("/", (req, res) => res.send("Hello World..!"));
 start();
 
